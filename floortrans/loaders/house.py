@@ -387,7 +387,7 @@ class House:
         self.icon_areas = []
 
         for e in svg.getElementsByTagName('g'):
-            try: 
+            try:
                 if e.getAttribute("id") == "Wall":
                     wall = PolygonWall(e, wall_id, shape)
                     wall.rr, wall.cc = self._clip_outside(wall.rr, wall.cc)
@@ -947,6 +947,7 @@ class House:
 
     def get_avg_wall_width(self):
         res = 0
+        i  = 0
         for i, w in enumerate(self.wall_objs):
             res += w.max_width
         res = res / float(i)

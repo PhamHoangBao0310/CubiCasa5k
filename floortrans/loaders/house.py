@@ -947,11 +947,11 @@ class House:
 
     def get_avg_wall_width(self):
         res = 0
-        i  = 0
-        print(self.wall_objs)
-        for i, w in enumerate(self.wall_objs):
-            print(i)
-            res += w.max_width
+        i  = 1
+        print(len(self.wall_objs))
+        # for i, w in enumerate(self.wall_objs):
+        #     print(i)
+        #     res += w.max_width
         res = res / float(i)
 
         return res

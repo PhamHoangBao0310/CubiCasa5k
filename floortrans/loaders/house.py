@@ -949,6 +949,7 @@ class House:
         res = 0
         i  = 0
         for i, w in enumerate(self.wall_objs):
+            print(i)
             res += w.max_width
         res = res / float(i)
 
